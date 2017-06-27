@@ -4,10 +4,10 @@ const request = require('supertest');
 const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
 const {ObjectID} = require('mongodb');
-const {todos, populateTodos} = require('./seed/seed');
+const {todos, populateTodos, users, populateUsers} = require('./seed/seed');
 
 
-
+beforeEach( populateUsers );
 beforeEach( populateTodos );
 
 
